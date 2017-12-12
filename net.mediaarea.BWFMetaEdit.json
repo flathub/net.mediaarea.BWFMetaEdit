@@ -8,6 +8,7 @@
   "rename-icon": "bwfmetaedit",
   "finish-args": [ "--filesystem=host",
                    "--share=network",
+                   "--device=dri",
                    "--socket=wayland",
                    "--socket=x11",
                    "--share=ipc" ],
