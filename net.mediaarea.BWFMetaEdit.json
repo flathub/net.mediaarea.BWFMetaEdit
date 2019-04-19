@@ -21,8 +21,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/1.3.6/bwfmetaedit_1.3.6.tar.xz",
-          "sha256": "446a2f645c50a1dd01e514b6d0617f7216545e8c4bcdcab140b37ff80b85364f"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/1.3.7/bwfmetaedit_1.3.7.tar.xz",
+          "sha256": "1712b17cc57f62108c273bba6c5c855688ef494573a897c6e9790cd1d2e37d97"
         },
         {
             "type": "file",
