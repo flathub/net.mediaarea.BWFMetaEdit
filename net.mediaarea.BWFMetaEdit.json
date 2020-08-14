@@ -1,7 +1,7 @@
 {
   "app-id": "net.mediaarea.BWFMetaEdit",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.12",
+  "runtime-version": "5.14",
   "sdk": "org.kde.Sdk",
   "command": "bwfmetaedit-gui",
   "rename-desktop-file": "bwfmetaedit-gui.desktop",
@@ -21,8 +21,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/1.3.8/bwfmetaedit_1.3.8.tar.xz",
-          "sha256": "8ac01f0b6904bbbafd43b0677de3e8609f87f173da6b05c84587551b6426029c"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/20.08/bwfmetaedit_20.08.tar.xz",
+          "sha256": "f94bd61675bd8f844eb9b6ca02e32edc9c9f2206c0810f8a884eae91346e2ee4"
         },
         {
             "type": "file",
