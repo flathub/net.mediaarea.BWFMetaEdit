@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2016-2019 MediaArea.net <info@mediaarea.net> -->
+<!-- Copyright 2016-2020 MediaArea.net <info@mediaarea.net> -->
 <component type="desktop">
   <id type="desktop">net.mediaarea.BWFMetaEdit.desktop</id>
   <metadata_license>CC-BY-3.0</metadata_license>
-  <project_license>Public Domain</project_license>
+  <project_license>0BSD</project_license>
   <name>BWF MetaEdit</name>
   <summary>Embed, validate, and export BWF files metadata</summary>
   <description>
@@ -53,6 +53,8 @@
   <update_contact>info@mediaarea.net</update_contact>
   <developer_name>MediaArea.net SARL</developer_name>
   <releases>
+    <release version="20.08" date="2020-08-11" />
+    <release version="20.05" date="2020-05-26" />
     <release version="1.3.8" date="2019-04-26" />
     <release version="1.3.7" date="2019-04-19" />
     <release version="1.3.6" date="2018-09-10" />
