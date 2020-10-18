@@ -1,7 +1,7 @@
 {
   "app-id": "net.mediaarea.BWFMetaEdit",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.14",
+  "runtime-version": "5.15",
   "sdk": "org.kde.Sdk",
   "command": "bwfmetaedit-gui",
   "rename-desktop-file": "bwfmetaedit-gui.desktop",
