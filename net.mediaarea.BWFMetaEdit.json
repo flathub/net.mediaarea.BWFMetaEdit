@@ -5,6 +5,7 @@
   "sdk": "org.kde.Sdk",
   "command": "bwfmetaedit-gui",
   "rename-desktop-file": "bwfmetaedit-gui.desktop",
+  "rename-appdata-file": "bwfmetaedit-gui.metainfo.xml",
   "rename-icon": "bwfmetaedit",
   "finish-args": [ "--filesystem=host",
                    "--share=network",
@@ -21,18 +22,14 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/20.08/bwfmetaedit_20.08.tar.xz",
-          "sha256": "f94bd61675bd8f844eb9b6ca02e32edc9c9f2206c0810f8a884eae91346e2ee4"
-        },
-        {
-            "type": "file",
-            "path": "net.mediaarea.BWFMetaEdit.appdata.xml"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/21.07/bwfmetaedit_21.07.tar.xz",
+          "sha256": "ed43d003500d24a6fc1550c5df52dfcdcf3df1f80dfd2fb98ef743295259d8a3"
         }
       ],
       "post-install": [
         "install -D -m 0644 ../GNU/GUI/bwfmetaedit-gui.desktop /app/share/applications/bwfmetaedit-gui.desktop",
-        "install -D -m 0644 ../../Source/Resource/Image/FADGI/Logo.png /app/share/icons/hicolor/256x256/apps/bwfmetaedit.png",
-        "install -D -m 0644 ../../net.mediaarea.BWFMetaEdit.appdata.xml /app/share/appdata/net.mediaarea.BWFMetaEdit.appdata.xml"
+        "install -D -m 0644 ../../Source/Resource/Image/Logo/Logo.png /app/share/icons/hicolor/256x256/apps/bwfmetaedit.png",
+        "install -D -m 0644 ../GNU/GUI/bwfmetaedit-gui.metainfo.xml /app/share/appdata/bwfmetaedit-gui.metainfo.xml"
       ]
     }
   ]
