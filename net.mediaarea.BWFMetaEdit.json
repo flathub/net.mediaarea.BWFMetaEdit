@@ -22,8 +22,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/25.04/bwfmetaedit_25.04.tar.xz",
-          "sha256": "b545bc206caa960c64d7314af0dd5ac1c6ae30e8364b63d97fd55e655a5c750b"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.01/bwfmetaedit_26.01.tar.xz",
+          "sha256": "79d8e7fa6891bdb3f6ce2ab101ee485e00ff1c2e9079941f35fae2f791dee99e"
         }
       ],
       "post-install": [
