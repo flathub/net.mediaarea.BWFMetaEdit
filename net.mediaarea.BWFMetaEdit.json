@@ -1,24 +1,29 @@
 {
   "app-id": "net.mediaarea.BWFMetaEdit",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.8",
+  "runtime-version": "6.10",
   "sdk": "org.kde.Sdk",
   "command": "bwfmetaedit-gui",
   "rename-desktop-file": "bwfmetaedit-gui.desktop",
   "rename-appdata-file": "bwfmetaedit-gui.metainfo.xml",
   "rename-icon": "bwfmetaedit",
-  "finish-args": [ "--filesystem=host",
-                   "--share=network",
-                   "--device=dri",
-                   "--socket=wayland",
-                   "--socket=x11",
-                   "--share=ipc" ],
+  "finish-args": [
+    "--filesystem=host",
+    "--share=network",
+    "--device=dri",
+    "--socket=wayland",
+    "--socket=x11",
+    "--share=ipc"
+  ],
   "modules": [
     {
       "name": "bwfmetaedit-gui",
       "subdir": "Project/QtCreator",
       "buildsystem": "qmake",
-      "config-opts": [ "-after", "target.path=/app/bin" ],
+      "config-opts": [
+        "-after",
+        "target.path=/app/bin"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -27,9 +32,9 @@
         }
       ],
       "post-install": [
-        "install -D -m 0644 ../GNU/GUI/bwfmetaedit-gui.desktop /app/share/applications/bwfmetaedit-gui.desktop",
+        "install -D -m 0644 ../GNU/GUI/bwfmetaedit-gui.desktop -t /app/share/applications/",
         "install -D -m 0644 ../../Source/Resource/Image/Logo/Logo.png /app/share/icons/hicolor/256x256/apps/bwfmetaedit.png",
-        "install -D -m 0644 ../GNU/GUI/bwfmetaedit-gui.metainfo.xml /app/share/appdata/bwfmetaedit-gui.metainfo.xml"
+        "install -D -m 0644 ../GNU/GUI/bwfmetaedit-gui.metainfo.xml -t /app/share/appdata/"
       ]
     }
   ]
