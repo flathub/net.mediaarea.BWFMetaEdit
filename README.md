@@ -1,28 +1,25 @@
-Flathub
--------
+# BWF MetaEdit
 
-Flathub is the central place for building and hosting Flatpak builds.
-Go to https://flathub.org/builds/ to see Flathub in action.
+___Embed, validate, and export BWF files metadata___
 
-Building applications
----------------------
+This tool permits embedding, editing, and exporting of metadata in Broadcast WAVE Format (BWF) files. 
+This tool can also enforce metadata guidelines developed by the Federal Agencies Audio-Visual Working Group, 
+as well as recommendations and specifications from the European Broadcasting Union (EBU), Microsoft, and IBM.
 
-Application manifests should go in their own repository in the [Flathub](https://github.com/flathub) organization,
-named after the application ID.
+---
 
-For example, for gnome-recipes, there is a repository named org.gnome.Recipes which has the org.gnome.Recipes.json
-file at the toplevel.
+## Manual Install and Run
 
-Hosted builds should be stable releases, not development snapshots, so please use tarballs or git tags, not just
-the tip of a branch.
+Make sure you follow the [setup guide for your Linux distribution](https://flathub.org/en/setup) before installing.
 
-More detailed requirements can be found in the [Review Guidelines](https://github.com/flathub/flathub/wiki/Review-Guidelines)
-
-Using the Flathub repository
-----------------------------
-
-To install applications that are hosted on Flathub, use the following:
+```bash
+flatpak install flathub net.mediaarea.BWFMetaEdit
+flatpak run net.mediaarea.BWFMetaEdit
 ```
-flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.gnome.Recipes
+
+## Building
+
+```bash
+git clone git@github.com:flathub/net.mediaarea.BWFMetaEdit.git
+flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install net.mediaarea.BWFMetaEdit.json
 ```
