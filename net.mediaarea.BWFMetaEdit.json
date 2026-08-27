@@ -1,8 +1,15 @@
 {
   "app-id": "net.mediaarea.BWFMetaEdit",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.10",
+  "runtime-version": "6.11",
   "sdk": "org.kde.Sdk",
+  "add-build-extensions": {
+    "org.freedesktop.Sdk.Extension.rust-stable": {
+      "directory": "lib/sdk/rust-stable",
+      "version": "25.08",
+      "remove-after-build": true
+    }
+  },
   "command": "bwfmetaedit-gui",
   "rename-desktop-file": "bwfmetaedit-gui.desktop",
   "rename-appdata-file": "bwfmetaedit-gui.metainfo.xml",
@@ -17,18 +24,52 @@
   ],
   "modules": [
     {
+      "name": "c2pa",
+      "buildsystem": "simple",
+      "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+          "CARGO_HOME": "/run/build/c2pa/cargo"
+        }
+      },
+      "build-commands": [
+        "cd Source/ThirdParty/c2pa-rs && cargo build --release --offline --locked -p c2pa-c-ffi --no-default-features --features rust_native_crypto,http,file_io",
+        "install -Dm755 Source/ThirdParty/c2pa-rs/target/release/libc2pa_c.so /app/lib/libc2pa_c.so",
+        "install -Dm644 Source/ThirdParty/c2pa-rs/target/release/c2pa.h /app/include/c2pa.h"
+      ],
+      "cleanup": [
+        "/include"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.08/bwfmetaedit_26.08.tar.xz",
+          "sha256": "a1a563fcebeb6bbb95c14fed2700ce981a5ca25f68aa3dfc5ea127d7a06abf53"
+        },
+        "cargo-sources.json"
+      ]
+    },
+    {
       "name": "bwfmetaedit-gui",
       "subdir": "Project/QtCreator",
       "buildsystem": "qmake",
       "config-opts": [
+        "ENABLE_C2PA=dynamic",
+        "INCLUDEPATH+=/app/include",
         "-after",
         "target.path=/app/bin"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.01/bwfmetaedit_26.01.tar.xz",
-          "sha256": "79d8e7fa6891bdb3f6ce2ab101ee485e00ff1c2e9079941f35fae2f791dee99e"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.08/bwfmetaedit_26.08.tar.xz",
+          "sha256": "a1a563fcebeb6bbb95c14fed2700ce981a5ca25f68aa3dfc5ea127d7a06abf53"
+        },
+        {
+          "type": "file",
+          "path": "net.mediaarea.BWFMetaEdit.metainfo.xml",
+          "dest": "Project/GNU/GUI",
+          "dest-filename": "bwfmetaedit-gui.metainfo.xml"
         }
       ],
       "post-install": [
