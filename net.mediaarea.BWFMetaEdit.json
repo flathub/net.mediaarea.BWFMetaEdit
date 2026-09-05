@@ -6,7 +6,7 @@
   "add-build-extensions": {
     "org.freedesktop.Sdk.Extension.rust-stable": {
       "directory": "lib/sdk/rust-stable",
-      "version": "25.08",
+      "version": "26.08",
       "remove-after-build": true
     }
   },
@@ -27,7 +27,7 @@
       "name": "c2pa",
       "buildsystem": "simple",
       "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "append-path": "/app/lib/sdk/rust-stable/bin",
         "env": {
           "CARGO_HOME": "/run/build/c2pa/cargo"
         }
@@ -43,8 +43,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.08/bwfmetaedit_26.08.tar.xz",
-          "sha256": "a1a563fcebeb6bbb95c14fed2700ce981a5ca25f68aa3dfc5ea127d7a06abf53"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.08.1/bwfmetaedit_26.08.1.tar.xz",
+          "sha256": "1042ab5350de813bb0f0131347089558f393c8332418b687d383be2ae0895dcf"
         },
         "cargo-sources.json"
       ]
@@ -62,8 +62,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.08/bwfmetaedit_26.08.tar.xz",
-          "sha256": "a1a563fcebeb6bbb95c14fed2700ce981a5ca25f68aa3dfc5ea127d7a06abf53"
+          "url": "https://mediaarea.net/download/source/bwfmetaedit/26.08.1/bwfmetaedit_26.08.1.tar.xz",
+          "sha256": "1042ab5350de813bb0f0131347089558f393c8332418b687d383be2ae0895dcf"
         },
         {
           "type": "file",
